@@ -1,0 +1,341 @@
+body {
+  font-family: "Nunito Sans";
+}
+
+.navbar {
+  padding: 1.5rem 1rem;
+  font-family: "Nunito Sans";
+  font-weight: 200;
+  font-size: 18px;
+  color: #000;
+}
+
+.navbar .navbar-brand {
+  font-weight: 400;
+}
+
+.navbar .nav-link {
+  color: #000 !important;
+  margin-left: 2rem;
+}
+
+#hero h1 {
+  margin-top: 25px;
+  font-family: "Nunito Sans";
+  font-weight: 200;
+  font-size: 75px;
+}
+
+#hero .lv {
+  margin-top: 25px;
+  height: 200px;
+  border-left: 1px solid #333333;
+  float: right;
+}
+
+#hero .bio {
+  margin-top: 40px;
+  font-family: "Nunito Sans";
+  font-weight: 200;
+  font-size: 28px;
+  float: left;
+}
+
+#work {
+  margin-top: 50px;
+}
+
+#work .best-work {
+  font-family: "Nunito Sans";
+  font-weight: 200;
+  font-size: 28px;
+  -webkit-writing-mode: tb-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-orientation: mixed;
+  text-align: right;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: -5px;
+}
+
+#work .slider-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  margin: 0 auto;
+}
+
+#work .slider-wrapper {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#work .slide {
+  min-width: 530px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 250px;
+          flex: 0 0 250px;
+}
+
+#work .slide img {
+  width: 500px;
+  height: 310px;
+}
+
+#work .slider-wrapper.animate {
+  -webkit-transition: -webkit-transform .6s ease;
+  transition: -webkit-transform .6s ease;
+  transition: transform .6s ease;
+  transition: transform .6s ease, -webkit-transform .6s ease;
+}
+
+#work .post {
+  overflow: hidden;
+}
+
+#know-more {
+  /*fLeft*/
+  /* ----- MODAL STYLE ----- */
+}
+
+#know-more .modal.fleft .modal-dialog {
+  -webkit-animation: fleft .5s ease-in-out forwards;
+  animation: fleft .5s ease-in-out forwards;
+  position: absolute;
+  margin: auto;
+  left: 0 !important;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  transform: translate3d(0%, 0, 0);
+}
+
+#know-more .modal.fleft .modal-content,
+#know-more .modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+#know-more .modal.fleft .modal-body,
+#know-more .modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+#know-more .modal.fleft.fade .modal-dialog {
+  left: -320px;
+  -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+  transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+#know-more .modal.fleft.fade.in .modal-dialog {
+  left: 0;
+}
+
+#know-more .modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+#know-more .know-more {
+  margin-top: 50px;
+}
+
+#know-more .know-more .row .makhluk-hidup {
+  width: 185px;
+  height: 215px;
+  float: right;
+}
+
+#know-more .know-more .row h1 {
+  width: 80%;
+  font-family: "Nunito Sans";
+  font-weight: 200;
+  font-size: 75px;
+}
+
+#know-more .know-more .row p {
+  width: 80%;
+  font-family: "Nunito Sans";
+  font-weight: 200;
+  font-size: 23px;
+  margin-top: 10px;
+}
+
+#know-more .know-more .connect {
+  margin-top: 25px;
+  font-family: "Nunito Sans";
+  font-weight: 200;
+  font-size: 23px;
+  margin-left: 100px;
+}
+
+.work-detail {
+  visibility: hidden;
+  display: none;
+  -webkit-transition: .5s fbottom;
+  transition: .5s fbottom;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1;
+  background: #fff;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.work-detail .container {
+  margin-top: 35px;
+}
+
+.work-detail .container h1 {
+  font-size: 75px;
+  font-weight: 200;
+}
+
+.work-detail .container p {
+  font-size: 28px;
+  font-weight: 200;
+}
+
+.work-detail .container p:nth-last-child(1) {
+  margin-top: -20px;
+}
+
+.work-detail .container ul li {
+  font-family: "Nunito Sans" !important;
+}
+
+.work-detail .container .body {
+  padding-bottom: 50px !important;
+}
+
+.work-detail .container .body img {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.work-detail .btn-close {
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  line-height: 50px;
+  font-size: 25px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.wshow {
+  visibility: visible;
+  display: block;
+  animation: fbottom .5s ease-in-out forwards;
+  -webkit-animation: fbottom .5s ease-in-out forwards;
+}
+
+.top {
+  position: fixed;
+  bottom: 25px;
+  right: 40px;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  text-align: center;
+  z-index: 2;
+  border-radius: 4px;
+  -webkit-animation: fbottom 1s ease-in-out forwards;
+  animation: fbottom 1s ease-in-out forwards;
+}
+
+@media (max-width: 800px) {
+  .work-detail {
+    width: 100%;
+    height: 100%;
+    position: absolute !important;
+  }
+  .hide-xs {
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  background: rgba(0, 0, 0, 0.03);
+  border-left: 1px solid #d3dae0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+@-webkit-keyframes fleft {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fleft {
+  from {
+    visibility: hidden;
+    -webkit-transform: translate3d(-400px, 0, 0);
+    transform: translate3d(-400px, 0, 0);
+  }
+  to {
+    visibility: visible;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fbottom {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 120px, 0);
+    transform: translate3d(0, 120px, 0);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fbottom {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 120px, 0);
+    transform: translate3d(0, 120px, 0);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=index.css.map */
