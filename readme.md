@@ -1,1 +1,1 @@
-My personal portfolio site : rzlstprnma.rizals-portfolio.github.io
+My personal portfolio site : https://rzlstprnma.github.io/rizals-portfolio/
