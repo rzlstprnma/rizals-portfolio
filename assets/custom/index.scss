@@ -52,6 +52,7 @@ body{
         margin-top: 50px;
         margin-left: 50px;
         margin-right: -5px;
+        z-index: 1;
     }
     .slider-container {
         width: 100%;
@@ -65,8 +66,7 @@ body{
     .slider-wrapper {
         list-style: none;
         display: flex;
-    }
-      
+    }    
     .slide {
         min-width: 530px;
         flex: 0 0 250px;
@@ -89,7 +89,7 @@ body{
     .modal.fleft .modal-dialog{
         -webkit-animation: fleft .5s ease-in-out forwards;
         animation: fleft .5s ease-in-out forwards;
-        position: absolute;
+        position: fixed;
         margin: auto;
         left: 0 !important;
         width: 100%;
@@ -135,7 +135,6 @@ body{
             .makhluk-hidup{
                 width: 185px;
                 height: 215px;
-                float: right;
             }
             h1{
                 width: 80%;
@@ -156,7 +155,14 @@ body{
             font-family: $primary-font;
             font-weight: 200;
             font-size: 23px;
-            margin-left: 100px;
+        }
+        @media (min-width: 800px){
+            .makhluk-hidup{
+                float: right;
+            }
+            .connect{
+                margin-left: 100px;
+            }
         }
     }    
 }
@@ -165,12 +171,6 @@ body{
     display: none;
     -webkit-transition: .5s fbottom;
     transition: .5s fbottom;
-    position: absolute !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 1;
-    background: #fff;
-    top: 0 ; left: 0; bottom: 0; right: 0;
     .container{
         margin-top: 35px;
         h1{
@@ -195,25 +195,34 @@ body{
             padding-bottom: 50px !important;
         }
     }
-    .btn-close{
-        position: absolute;
-        right: 50px; top: 30px;
-        width: 50px; height: 50px;
-        border-radius: 50px;
-        background: rgba(0, 0, 0, .1);
-        text-align: center;
-        line-height: 50px;
-        font-size: 25px;
-        font-weight: 200;
-        cursor: pointer;
+}
+.btn-close{
+    position: absolute;
+    right: 50px; top: 30px;
+    width: 50px; height: 50px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, .1) !important;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    font-weight: 200;
+    cursor: pointer;
+    &:focus{
+        outline: none;
     }
 }
 
 .wshow{
-    visibility: visible;
-    display: block;
     animation: fbottom .5s ease-in-out forwards;
     -webkit-animation: fbottom .5s ease-in-out forwards;
+    visibility: visible;
+    display: block;
+    position: absolute !important;
+    width: 100%;
+    z-index: 2;
+    overflow: auto;
+    background: #fff;
+    top: 0 !important;
 }
 
 .top {
@@ -225,7 +234,7 @@ body{
     color: rgba(0, 0, 0, .8);
     font-weight: bold;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
     border-radius: 4px;
     -webkit-animation: fbottom 1s ease-in-out forwards;
             animation: fbottom 1s ease-in-out forwards;
