@@ -198,12 +198,12 @@ body {
 }
 
 .work-detail .container h1 {
-  font-size: 48px;
+  font-size: 75px;
   font-weight: 200;
 }
 
 .work-detail .container p {
-  font-size: 23px;
+  font-size: 28px;
   font-weight: 200;
 }
 
@@ -279,7 +279,10 @@ body {
     overflow: auto;
   }
   .work-detail h1 {
-    font-size: 48px;
+    font-size: 48px !important;
+  }
+  .work-detail p {
+    font-size: 23px;
   }
   .hide-xs {
     display: none;
