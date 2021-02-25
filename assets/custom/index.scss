@@ -12,16 +12,22 @@ body{
         font-weight: 400;
     }
     .nav-link{
-        color: #000 !important;
+        // color: #000 !important;
         margin-left: 2rem;
+        font-size: 16px;
+    }
+    .btn-primary{
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
     }
 }
 
 #hero{
+    margin-top: 30px;
     h1{
         margin-top: 25px;
         font-family: $primary-font;
-        font-weight: 200;
+        font-weight: lighter;
         font-size: 75px;
     }
     .lv{
@@ -31,7 +37,7 @@ body{
         float: right;
     }
     .bio{
-        margin-top: 40px;
+        margin-top: 50px;
         font-family: $primary-font;
         font-weight: 200;
         font-size: 28px;
@@ -40,19 +46,16 @@ body{
 }
 
 #work{
-    margin-top: 50px;
+    margin-top: 70px;
     .best-work{
         font-family: $primary-font;
-        font-weight: 200;
         font-size: 28px;        
         writing-mode: tb-rl;
         transform: rotate(180deg);
         text-orientation: mixed;
         text-align: right;
-        margin-top: 50px;
         margin-left: 50px;
         margin-right: -5px;
-        // z-index: 1;
     }
     .slider-container {
         width: 100%;
@@ -68,11 +71,23 @@ body{
         display: flex;
     }    
     .slide {
-        min-width: 530px;
+        min-width: 410px;
         flex: 0 0 250px;
         img{
-            width: 500px;
-            height: 310px;
+            position: relative;
+            width: 370px;
+            height: 210px;
+            &:hover{
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0; left: 0;
+                    background: #000;
+                    z-index: 1;
+                }
+            }
         }
     }
     .slider-wrapper.animate {
@@ -141,20 +156,22 @@ body{
                 font-family: $primary-font;
                 font-weight: 200;
                 font-size: 75px;
+                margin-top: 20px;
             }
             p{
                 width: 80%;
                 font-family: $primary-font;
                 font-weight: 200;
-                font-size: 23px;
-                margin-top: 10px;
+                font-size: 20px;
+                line-height: 37px;
+                margin-top: 30px;
             }
         }
         .connect{
             margin-top: 25px;
             font-family: $primary-font;
             font-weight: 200;
-            font-size: 23px;
+            font-size: 20px;
         }
         @media (min-width: 800px){
             .makhluk-hidup{
@@ -180,6 +197,7 @@ body{
         p{
             font-size: 28px;
             font-weight: 200;
+            line-height: 57px;
         }
         p:nth-last-child(1){
             margin-top: -20px;
