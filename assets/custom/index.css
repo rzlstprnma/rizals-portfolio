@@ -258,6 +258,8 @@ body {
   transition: .5s fbottom;
   width: 100%;
   height: 100%;
+  top: 0 !important;
+  left: 0 !important;
 }
 
 .work-detail .container {
@@ -316,12 +318,11 @@ body {
           animation: fbottom .5s ease-in-out forwards;
   visibility: visible;
   display: block;
-  position: fixed !important;
+  position: absolute !important;
   width: 100%;
   height: 100%;
   z-index: 9999 !important;
   background: #fff;
-  top: 0 !important;
 }
 
 .top {
