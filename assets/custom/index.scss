@@ -1,71 +1,90 @@
-$primary-font: 'Nunito Sans';
+@font-face {
+    font-family: primary-font;
+    font-weight: 200;
+    src: url(../SuisseIntl-Light.otf);
+    line-spacing: 10px;
+}
 body{
-    font-family: $primary-font;
+    font-family: primary-font;
+    letter-spacing: .5px !important;
+    color: #252525;
 }
 .navbar{
     padding: 1.5rem 1rem;
-    font-family: $primary-font;
+    font-family: primary-font;
     font-weight: 200;
-    font-size: 18px;
-    color: #000;
     .navbar-brand{
-        font-weight: 400;
+        font-weight: bold;
+        font-size: 16px;
+        color: #000;
     }
     .nav-link{
-        // color: #000 !important;
-        font-size: 16px;
+        font-size: 10px;
     }
     .btn-primary{
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
         margin-left: 0;
+        border-radius: 50%;
     }
     @media (min-width: 800px) {
         .btn-primary{
             margin-left: 2rem;
+            padding-left: 1.5rem !important;
+            padding-right: 1.5rem !important;
+        }
+        .nav-link{
+            font-size: 14px;
+        }
+        .navbar-brand{
+            font-size: 16px;
         }
     }
 }
 
 #hero{
-    margin-top: 30px;
+    margin-top: 50px;
     h1{
         margin-top: 25px;
-        font-family: $primary-font;
-        font-weight: lighter;
-        font-size: 75px;
-    }
-    .lv{
-        margin-top: 25px;
-        height: 200px;
-        border-left: 1px solid #333333;
-        float: right;
+        font-family: primary-font;
+        font-size: 62px;
     }
     .bio{
-        margin-top: 50px;
-        font-family: $primary-font;
-        font-weight: 200;
-        font-size: 28px;
-        float: left;
+        margin-top: 60px;
+        font-family: primary-font;
+        font-size: 16px;
+        border-left: 2px solid #252525;
+        padding: 1.2rem;
+        float: right;
+        background: rgba(25, 25, 25, .04);
     }
 }
 @media (max-width: 800px) {
-    #hero {
-        margin-top: 10px;
+    #hero{
+        h1{
+            font-size: 38px;
+        }
+        .bio{
+            margin-top: 30px;
+            font-size: 14px;
+        }
     }
 }
 
 #work{
-    margin-top: 70px;
+    margin-top: 120px;
     .best-work{
-        font-family: $primary-font;
-        font-size: 28px;        
+        font-family: primary-font;
+        font-size: 18px;        
         writing-mode: tb-rl;
         transform: rotate(180deg);
         text-orientation: mixed;
         text-align: right;
         margin-left: 50px;
-        margin-right: -5px;
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bold;
+        // margin-right: -5px;
     }
     .slider-container {
         width: 100%;
@@ -91,9 +110,12 @@ body{
     }
     .slider-wrapper.animate {
         transition: transform .6s ease;
-    }
+    }    
+}
 
-    @media (max-width: 800px) {
+@media (max-width: 800px) {
+    #work{
+        margin-top: 20px;
         .best-work {
             writing-mode: horizontal-tb;
             transform: none;
@@ -106,22 +128,20 @@ body{
         .slider-container{
             width: 100%;
             overflow: auto;
-            // margin: 0 !important;
             transition: transform 1s ease;
             margin-left: -25px;
-            // max-width: 720px;
         }
         .slide {
             padding-right: 15px;
             padding-left: 15px;
             width: 100%;
             flex: none;
-            &:nth-child(1) {
-                margin-top: 15px;
+            margin-top: 45px;
+            &:nth-child(2) {
+                margin-top: 0px;
             }
-            margin-top: 40px;
             img {
-                width: 350px;
+                width: 100%;
                 height: 210px;
             }
         }
@@ -181,74 +201,74 @@ body{
     }
     
     .know-more{
-        margin-top: 50px;
+        margin-top: 80px;
         .row{
+            padding: 0;
             .makhluk-hidup{
-                width: 185px;
-                height: 215px;
+                width: 125px;
             }
             h1{
                 width: 80%;
-                font-family: $primary-font;
-                font-weight: 200;
-                font-size: 75px;
-                margin-top: 20px;
+                font-family: primary-font;
+                font-size: 62px;
+                margin-top: 7px;
             }
             p{
                 width: 80%;
-                font-family: $primary-font;
+                font-family: primary-font;
                 font-weight: 200;
-                font-size: 20px;
-                line-height: 37px;
-                margin-top: 30px;
+                font-size: 16px;
+                line-height: 27px;
+                margin-top: 7px;
             }
-        }
-        .connect{
-            margin-top: 25px;
-            font-family: $primary-font;
-            font-weight: 200;
-            font-size: 20px;
         }
         @media (min-width: 800px){
-            .makhluk-hidup{
-                float: right;
-            }
-            .connect{
-                margin-left: 100px;
+            .row{
+                padding: 3rem;
+                h1{
+                    margin-top: 0;
+                }
+                .makhluk-hidup{
+                    float: right;
+                }
             }
         }
     }    
 }
 .work-detail{
-    visibility: hidden;
-    display: none;
-    -webkit-transition: .5s fbottom;
-    transition: .5s fbottom;
-    width: 100%;
-    height: 100%;
-    top: 0 !important;
-    left: 0 !important;
+	position: fixed;
+	background: #fff;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 80%;
+    opacity: .2;
+	visibility: hidden;
+	-webkit-transition: opacity .55s, height .55s, width .55s, visibility .35s;
+	transition: opacity .55s, height .55s, width .55s, visibility .35s;
+	overflow: auto;
+    z-index: 999;
     .container{
-        margin-top: 35px;
+        margin-top: 65px;
         h1{
-            font-size: 75px;
-            font-weight: 200;
+            font-size: 38px;
+            margin-bottom: 15px;
         }
         p{
-            font-size: 28px;
-            font-weight: 200;
-            line-height: 57px;
+            font-size: 16px;
+            line-height: 27px;
         }
         p:nth-last-child(1){
             margin-top: -20px;
         }
         ul li{
-        font-family: $primary-font !important;
+        font-family: primary-font !important;
         }
         .body{
             img{
                 margin-top: 40px;
                 width: 100%;
+                border: 1px solid #252525;
             }
             padding-bottom: 50px !important;
         }
@@ -256,14 +276,14 @@ body{
 }
 .btn-close{
     position: absolute;
-    right: 50px; top: 30px;
-    width: 50px; height: 50px;
-    border-radius: 50px;
+    right: 30px; top: 30px;
+    width: 40px; height: 40px;
+    border-radius: 50%;
     background: rgba(0, 0, 0, .1) !important;
     text-align: center;
-    line-height: 50px;
-    font-size: 25px;
-    font-weight: 200;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
     &:focus{
         outline: none;
@@ -271,15 +291,11 @@ body{
 }
 
 .wshow{
-    animation: fbottom .5s ease-in-out forwards;
+    // animation: fbottom .5s ease-in-out forwards;
     visibility: visible;
-    display: block;
-    position: absolute !important;
     width: 100%;
     height: 100%;
-    z-index: 9999 !important;
-    // overflow: auto;
-    background: #fff;
+    opacity: 1;
 }
 
 .top {
@@ -295,24 +311,6 @@ body{
     border-radius: 4px;
     -webkit-animation: fbottom 1s ease-in-out forwards;
             animation: fbottom 1s ease-in-out forwards;
-}
-
-@media (max-width: 800px){
-    .work-detail{
-        width: 100%;
-        height: 100%;
-        position: absolute !important;
-        overflow: auto;
-        h1{
-            font-size: 48px !important;
-        }
-        p{
-            font-size: 23px;
-        }
-    }
-    .hide-xs{
-        display: none;
-    }
 }
  
 ::-webkit-scrollbar {

@@ -1,74 +1,90 @@
+@font-face {
+  font-family: primary-font;
+  font-weight: 200;
+  src: url(../SuisseIntl-Light.otf);
+  line-spacing: 10px;
+}
+
 body {
-  font-family: "Nunito Sans";
+  font-family: primary-font;
+  letter-spacing: .5px !important;
+  color: #252525;
 }
 
 .navbar {
   padding: 1.5rem 1rem;
-  font-family: "Nunito Sans";
+  font-family: primary-font;
   font-weight: 200;
-  font-size: 18px;
-  color: #000;
 }
 
 .navbar .navbar-brand {
-  font-weight: 400;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
 }
 
 .navbar .nav-link {
-  font-size: 16px;
+  font-size: 10px;
 }
 
 .navbar .btn-primary {
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
   margin-left: 0;
+  border-radius: 50%;
 }
 
 @media (min-width: 800px) {
   .navbar .btn-primary {
     margin-left: 2rem;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  .navbar .nav-link {
+    font-size: 14px;
+  }
+  .navbar .navbar-brand {
+    font-size: 16px;
   }
 }
 
 #hero {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 #hero h1 {
   margin-top: 25px;
-  font-family: "Nunito Sans";
-  font-weight: lighter;
-  font-size: 75px;
-}
-
-#hero .lv {
-  margin-top: 25px;
-  height: 200px;
-  border-left: 1px solid #333333;
-  float: right;
+  font-family: primary-font;
+  font-size: 62px;
 }
 
 #hero .bio {
-  margin-top: 50px;
-  font-family: "Nunito Sans";
-  font-weight: 200;
-  font-size: 28px;
-  float: left;
+  margin-top: 60px;
+  font-family: primary-font;
+  font-size: 16px;
+  border-left: 2px solid #252525;
+  padding: 1.2rem;
+  float: right;
+  background: rgba(25, 25, 25, 0.04);
 }
 
 @media (max-width: 800px) {
-  #hero {
-    margin-top: 10px;
+  #hero h1 {
+    font-size: 38px;
+  }
+  #hero .bio {
+    margin-top: 30px;
+    font-size: 14px;
   }
 }
 
 #work {
-  margin-top: 70px;
+  margin-top: 120px;
 }
 
 #work .best-work {
-  font-family: "Nunito Sans";
-  font-size: 28px;
+  font-family: primary-font;
+  font-size: 18px;
   -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: tb-rl;
@@ -77,7 +93,9 @@ body {
   text-orientation: mixed;
   text-align: right;
   margin-left: 50px;
-  margin-right: -5px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
 }
 
 #work .slider-container {
@@ -120,6 +138,9 @@ body {
 }
 
 @media (max-width: 800px) {
+  #work {
+    margin-top: 20px;
+  }
   #work .best-work {
     -webkit-writing-mode: horizontal-tb;
         -ms-writing-mode: lr-tb;
@@ -148,13 +169,13 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
-    margin-top: 40px;
+    margin-top: 45px;
   }
-  #work .slide:nth-child(1) {
-    margin-top: 15px;
+  #work .slide:nth-child(2) {
+    margin-top: 0px;
   }
   #work .slide img {
-    width: 350px;
+    width: 100%;
     height: 210px;
   }
   #work .slider-wrapper {
@@ -210,71 +231,72 @@ body {
 }
 
 #know-more .know-more {
-  margin-top: 50px;
+  margin-top: 80px;
+}
+
+#know-more .know-more .row {
+  padding: 0;
 }
 
 #know-more .know-more .row .makhluk-hidup {
-  width: 185px;
-  height: 215px;
+  width: 125px;
 }
 
 #know-more .know-more .row h1 {
   width: 80%;
-  font-family: "Nunito Sans";
-  font-weight: 200;
-  font-size: 75px;
-  margin-top: 20px;
+  font-family: primary-font;
+  font-size: 62px;
+  margin-top: 7px;
 }
 
 #know-more .know-more .row p {
   width: 80%;
-  font-family: "Nunito Sans";
+  font-family: primary-font;
   font-weight: 200;
-  font-size: 20px;
-  line-height: 37px;
-  margin-top: 30px;
-}
-
-#know-more .know-more .connect {
-  margin-top: 25px;
-  font-family: "Nunito Sans";
-  font-weight: 200;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 27px;
+  margin-top: 7px;
 }
 
 @media (min-width: 800px) {
-  #know-more .know-more .makhluk-hidup {
-    float: right;
+  #know-more .know-more .row {
+    padding: 3rem;
   }
-  #know-more .know-more .connect {
-    margin-left: 100px;
+  #know-more .know-more .row h1 {
+    margin-top: 0;
+  }
+  #know-more .know-more .row .makhluk-hidup {
+    float: right;
   }
 }
 
 .work-detail {
-  visibility: hidden;
-  display: none;
-  -webkit-transition: .5s fbottom;
-  transition: .5s fbottom;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  height: 100%;
-  top: 0 !important;
-  left: 0 !important;
+  height: 80%;
+  opacity: .2;
+  visibility: hidden;
+  -webkit-transition: opacity .55s, height .55s, width .55s, visibility .35s;
+  transition: opacity .55s, height .55s, width .55s, visibility .35s;
+  overflow: auto;
+  z-index: 999;
 }
 
 .work-detail .container {
-  margin-top: 35px;
+  margin-top: 65px;
 }
 
 .work-detail .container h1 {
-  font-size: 75px;
-  font-weight: 200;
+  font-size: 38px;
+  margin-bottom: 15px;
 }
 
 .work-detail .container p {
-  font-size: 28px;
-  font-weight: 200;
-  line-height: 57px;
+  font-size: 16px;
+  line-height: 27px;
 }
 
 .work-detail .container p:nth-last-child(1) {
@@ -282,7 +304,7 @@ body {
 }
 
 .work-detail .container ul li {
-  font-family: "Nunito Sans" !important;
+  font-family: primary-font !important;
 }
 
 .work-detail .container .body {
@@ -292,20 +314,21 @@ body {
 .work-detail .container .body img {
   margin-top: 40px;
   width: 100%;
+  border: 1px solid #252525;
 }
 
 .btn-close {
   position: absolute;
-  right: 50px;
+  right: 30px;
   top: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   background: rgba(0, 0, 0, 0.1) !important;
   text-align: center;
-  line-height: 50px;
-  font-size: 25px;
-  font-weight: 200;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
 }
 
@@ -314,15 +337,10 @@ body {
 }
 
 .wshow {
-  -webkit-animation: fbottom .5s ease-in-out forwards;
-          animation: fbottom .5s ease-in-out forwards;
   visibility: visible;
-  display: block;
-  position: absolute !important;
   width: 100%;
   height: 100%;
-  z-index: 9999 !important;
-  background: #fff;
+  opacity: 1;
 }
 
 .top {
@@ -338,24 +356,6 @@ body {
   border-radius: 4px;
   -webkit-animation: fbottom 1s ease-in-out forwards;
   animation: fbottom 1s ease-in-out forwards;
-}
-
-@media (max-width: 800px) {
-  .work-detail {
-    width: 100%;
-    height: 100%;
-    position: absolute !important;
-    overflow: auto;
-  }
-  .work-detail h1 {
-    font-size: 48px !important;
-  }
-  .work-detail p {
-    font-size: 23px;
-  }
-  .hide-xs {
-    display: none;
-  }
 }
 
 ::-webkit-scrollbar {
