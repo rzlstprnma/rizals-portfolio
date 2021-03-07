@@ -25,6 +25,11 @@ body {
 
 .navbar .nav-link {
   font-size: 10px;
+  color: #000 !important;
+}
+
+.navbar .nav-link:hover {
+  color: #007bff !important;
 }
 
 .navbar .btn-primary {
@@ -32,6 +37,11 @@ body {
   padding-right: 1rem !important;
   margin-left: 0;
   border-radius: 50%;
+  color: #fff !important;
+}
+
+.navbar .btn-primary:hover {
+  color: #fff !important;
 }
 
 @media (min-width: 800px) {
@@ -232,6 +242,7 @@ body {
 
 #know-more .know-more {
   margin-top: 80px;
+  color: #000;
 }
 
 #know-more .know-more .row {
@@ -254,7 +265,7 @@ body {
   font-family: primary-font;
   font-weight: 200;
   font-size: 16px;
-  line-height: 27px;
+  line-height: 30px;
   margin-top: 7px;
 }
 
@@ -287,6 +298,7 @@ body {
 
 .work-detail .container {
   margin-top: 65px;
+  color: #000;
 }
 
 .work-detail .container h1 {
@@ -392,24 +404,6 @@ body {
     visibility: visible;
     -webkit-transform: none;
     transform: none;
-  }
-}
-
-@-webkit-keyframes fbottom {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fbottom {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 /*# sourceMappingURL=index.css.map */

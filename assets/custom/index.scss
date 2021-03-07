@@ -20,12 +20,20 @@ body{
     }
     .nav-link{
         font-size: 10px;
+        color: #000 !important;
+        &:hover{
+            color: #007bff !important;
+        }
     }
     .btn-primary{
         padding-left: 1rem !important;
         padding-right: 1rem !important;
         margin-left: 0;
         border-radius: 50%;
+        color: #fff !important;
+        &:hover{
+            color: #fff !important;
+        }
     }
     @media (min-width: 800px) {
         .btn-primary{
@@ -202,6 +210,7 @@ body{
     
     .know-more{
         margin-top: 80px;
+        color: #000;
         .row{
             padding: 0;
             .makhluk-hidup{
@@ -218,7 +227,7 @@ body{
                 font-family: primary-font;
                 font-weight: 200;
                 font-size: 16px;
-                line-height: 27px;
+                line-height: 30px;
                 margin-top: 7px;
             }
         }
@@ -250,6 +259,7 @@ body{
     z-index: 999;
     .container{
         margin-top: 65px;
+        color: #000;
         h1{
             font-size: 38px;
             margin-bottom: 15px;
@@ -262,7 +272,7 @@ body{
             margin-top: -20px;
         }
         ul li{
-        font-family: primary-font !important;
+            font-family: primary-font !important;
         }
         .body{
             img{
@@ -291,7 +301,6 @@ body{
 }
 
 .wshow{
-    // animation: fbottom .5s ease-in-out forwards;
     visibility: visible;
     width: 100%;
     height: 100%;
@@ -334,14 +343,5 @@ background: rgba(0, 0, 0, .08);
         visibility: visible;
         -webkit-transform: none;
         transform: none;
-    }
-}
-
-@keyframes fbottom {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
